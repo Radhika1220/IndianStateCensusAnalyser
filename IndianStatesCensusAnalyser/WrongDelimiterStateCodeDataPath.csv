@@ -1,6 +1,6 @@
 SerailNo,StateName,StateCode
-1,Kerala,32
-2,TamilNadu,33
+1:Kerala:32
+2:TamilNadu:33
 3,Puducherry,34
 4,Telangana,35
 5,Goa,30
