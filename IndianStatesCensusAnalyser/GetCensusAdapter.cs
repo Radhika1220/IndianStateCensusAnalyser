@@ -8,7 +8,7 @@ namespace IndianStatesCensusAnalyser
     public class GetCensusAdapter
     {
         //GETCENSUSDATA METHOD
-        public string[] GetCensusData(string csvFilePath, string headers)
+        public static string[] GetCensusData(string csvFilePath, string headers)
         {
             try
             {

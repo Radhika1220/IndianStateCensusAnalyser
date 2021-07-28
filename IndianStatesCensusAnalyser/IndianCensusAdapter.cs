@@ -9,14 +9,14 @@ namespace IndianStatesCensusAnalyser
     {
         string[] censusData;
         //Creating a dictionary to store the indiancensusdata;
-        Dictionary<string, FullCensusData> dataDic;
+        List<FullCensusData> dataDic;
 
         //LOADCENSUSDATA METHOD
-        public Dictionary<string,FullCensusData> LoadCensusData(string csvFilePath,string headers)
+        public List<FullCensusData> LoadCensusData(string csvFilePath,string headers)
         {
             try
             {
-                dataDic = new Dictionary<string, FullCensusData>();
+                dataDic = new List<FullCensusData>();
                 //Calling the getcensusdata method--->It returns the string array
                 censusData = GetCensusData(csvFilePath, headers);
                 //Skip the headers
@@ -32,12 +32,12 @@ namespace IndianStatesCensusAnalyser
                     //IndiaStateCode data
                     if (csvFilePath.Contains("IndiaStateCode.csv"))
                     {
-                        dataDic.Add(col[0], new FullCensusData(new StateData(col[0], col[1], col[2])));
+                        dataDic.Add(new FullCensusData(new StateData(col[0], col[1], col[2])));
                     }
                     //IndiaStateCensusData
                     if (csvFilePath.Contains("IndiaStateCensusData.csv"))
                     {
-                        dataDic.Add(col[0], new FullCensusData(new CensusData(col[0], col[1], col[2], col[3])));
+                        dataDic.Add( new FullCensusData(new CensusData(col[0], col[1], col[2], col[3])));
                     }
                 }
                 return dataDic;

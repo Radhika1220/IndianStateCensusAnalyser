@@ -9,9 +9,28 @@ SerailNo,StateName,StateCode
 8,Delhi,7
 9,Haryana,6
 10,Manipur,14
-11,JammuAndkashmir,1
-12,HimachalPradesh,2
+11,Jammu And kashmir,1
+12,Himachal Pradesh,2
 13,Assam,18
 14,Karnataka,29
 15,UttarPradesh,9
 16,Gujarat,24
+17,Uttarakhand,5
+18,Rajasthan,8
+19,Bihar,10
+20,Sikkim,11
+21,Arunchal Pradesh,12
+22,NagaLand,13
+23,Mizoram,15
+24,Tripura,16
+25,Meghalaya,17
+26,West Bengal,19
+27,JharKhand,20
+28,Odisha,21
+29,Chattisgarh,22
+30,Madhya Pradesh,23
+31,Maharashtra,27
+32,Andhra Pradesh,28
+33,Lakshasweep,31
+34,Andaman and Nicobar Islands,35
+35,Ladakh,38
