@@ -7,7 +7,7 @@ namespace IndianStatesCensusAnalyser
     public class CsvAdapterFactory
     {
         //LOADCSVDATA METHOD
-        public Dictionary<string, FullCensusData> LoadCsvData(CensusAnalyser.Country country,string csvFilePath,string headers)
+        public List<FullCensusData> LoadCsvData(CensusAnalyser.Country country,string csvFilePath,string headers)
         {
             try
             {

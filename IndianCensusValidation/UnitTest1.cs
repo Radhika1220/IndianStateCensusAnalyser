@@ -14,8 +14,8 @@ namespace IndianCensusValidation
         string wrongDelimiterstateCensusDataCSVPath = @"C:\Users\Radhika\source\repos\IndianStatesCensusAnalyser\IndianStatesCensusAnalyser\WrongDelimiterIndiaStateCensusData.csv";
         string wrongHeaderstateCensusDataCSVPath = @"C:\Users\Radhika\source\repos\IndianStatesCensusAnalyser\IndianStatesCensusAnalyser\WrongHeaderIndiaStateCensusData.csv";
         CsvAdapterFactory csv = null;
-        Dictionary<string, FullCensusData> totalRecords;
-        Dictionary<string, FullCensusData> stateRecords;
+        List<FullCensusData> totalRecords;
+        List<FullCensusData> stateRecords;
 
         [TestInitialize]
         //Initialize the record value
@@ -23,8 +23,8 @@ namespace IndianCensusValidation
         {
 
             csv = new CsvAdapterFactory();
-            totalRecords = new Dictionary<string, FullCensusData>();
-            stateRecords = new Dictionary<string, FullCensusData>();
+            totalRecords = new List<FullCensusData>();
+            stateRecords = new List<FullCensusData>();
         }
         /// <summary>
         /// UC1-TC1.1--->Returns the count of records present in IndianstateCensusData
