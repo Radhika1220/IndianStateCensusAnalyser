@@ -19,8 +19,8 @@ namespace IndianCensusValidation
         string wrongDelimiterStateCodeDataPath = @"C:\Users\Radhika\source\repos\IndianStatesCensusAnalyser\IndianStatesCensusAnalyser\WrongDelimiterStateCodeDataPath.csv";
         string wrongHeaderStateCodeDataPath = @"C:\Users\Radhika\source\repos\IndianStatesCensusAnalyser\IndianStatesCensusAnalyser\WrongHeaderStateCodeDataPath.csv";
         CsvAdapterFactory csv = null;
-        Dictionary<string, FullCensusData> totalRecords;
-        Dictionary<string, FullCensusData> stateRecords;
+        List<FullCensusData> totalRecords;
+        List<FullCensusData> stateRecords;
 
         [TestInitialize]
         //Initialize the record value
@@ -28,8 +28,8 @@ namespace IndianCensusValidation
         {
 
             csv = new CsvAdapterFactory();
-            totalRecords = new Dictionary<string, FullCensusData>();
-            stateRecords = new Dictionary<string, FullCensusData>();
+            totalRecords = new List<FullCensusData>();
+            stateRecords = new List<FullCensusData>();
         }
         /// <summary>
         /// UC1-TC1.1--->Returns the count of records present in IndianstateCensusData
@@ -85,7 +85,7 @@ namespace IndianCensusValidation
         public void State_Code_Return_CountOf_Records()
         {
             var totalRecords=csv.LoadCsvData(CensusAnalyser.Country.INDIA, stateCodeDataPath, "SerailNo,StateName,StateCode");
-            Assert.AreEqual(16, totalRecords.Count);
+            Assert.AreEqual(35, totalRecords.Count);
         }
         /// <summary>
         /// UC2-TC1.2--->Handle the file not found custom exception
